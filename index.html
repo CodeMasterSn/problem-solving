@@ -399,7 +399,13 @@
         </header>
         <div class="contact__grid">
           <div class="contact__form-card reveal">
-            <form name="contact" method="POST" data-netlify="true" action="/merci.html" class="contact__form">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              action="/merci.html"
+              class="contact__form"
+            >
               <input type="hidden" name="form-name" value="contact">
               <label class="contact__field">
                 <span class="visually-hidden">Nom complet</span>
@@ -520,6 +526,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Formulaire caché : enregistrement des champs par Netlify au déploiement -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input type="text" name="nom">
+    <input type="email" name="email">
+    <textarea name="projet"></textarea>
+  </form>
 
   <script src="main.js"></script>
 </body>
