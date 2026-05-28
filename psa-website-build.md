@@ -39,17 +39,16 @@ problem-solving-agency/
         ├── rahime-hero.PNG        ← photo principale (casse exacte : .PNG majuscule)
         ├── rahime-about.JPG       ← photo secondaire (casse exacte : .JPG majuscule)
         └── projets/
-            ├── billio.png
-            ├── cle-de-la-reussite.png
-            ├── darling-body.png
-            ├── jokkoevents.png
-            ├── lettouna.png
-            ├── matvilla.png
-            ├── mytima-love.png
-            ├── mohamigroup.png
-            ├── rekrut-rh.png
-            ├── samadesk.png
-            └── samaprof.png
+            ├── billio.jpeg
+            ├── cle-de-la-reussite.jpeg
+            ├── darling-body.jpeg
+            ├── jokkoevents.jpeg
+            ├── lettouna.jpeg
+            ├── matvilla.jpeg
+            ├── mytima-love.jpeg
+            ├── mohamigroup.jpeg
+            ├── rekrut-cv.jpeg
+            └── samadesk.jpeg
 ```
 
 > ⚠️ Respecter exactement la casse des noms de fichiers images (PNG et JPG en majuscule pour les photos du fondateur)
@@ -260,27 +259,26 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 </div>
 ```
 
-**11 projets à intégrer :**
+**10 projets à intégrer :**
 
 | Fichier | Nom affiché | URL | Catégorie | Description | Stack |
 |---|---|---|---|---|---|
-| `billio.png` | Billio | https://billio-sn.netlify.app | SaaS | Facturation et gestion commerciale pour entrepreneurs africains | Next.js · Supabase · PayTech |
-| `samadesk.png` | SamaDesk | https://samadesk.netlify.app | SaaS | Plateforme e-commerce de vente de bureaux et mobilier professionnel en ligne | Next.js · Supabase · Netlify |
-| `rekrut-rh.png` | Rekrut RH | https://rekrut-rh.netlify.app | SaaS IA | Recrutement assisté par IA — génération de fiches de poste, analyse de CV | Next.js · Groq · Gemini · Supabase |
-| `samaprof.png` | SamaProf | https://samaprof.netlify.app | EdTech | Coaching académique IA pour étudiants en informatique au Sénégal | Next.js · Groq · Supabase |
-| `jokkoevents.png` | JOKKO Events | https://jokkoevents.com | Plateforme | Gestion d'événements pour organisateurs — billetterie et suivi en temps réel | Next.js · Prisma · Supabase |
-| `lettouna.png` | Lettouna | https://lettouna.com | Application | Réservation de coiffeuses à domicile à Dakar avec paiement et notifications WhatsApp | Next.js · PayDunya · WhatsApp API |
-| `matvilla.png` | Mat Villa | https://matvilla.com | Site vitrine | BTP et peinture LUMINA — présentation de services et réalisations | HTML · CSS · Netlify |
-| `mytima-love.png` | Tima Love | https://mytimalove.com | Site vitrine | Site de rencontre sérieuse — mise en relation et profils pour trouver l'âme sœur | Next.js · Netlify |
-| `darling-body.png` | Darling Body | https://darlingbody.com | E-commerce | Boutique en ligne de produits bien-être et minceur pour femmes | HTML · CSS · JS |
-| `cle-de-la-reussite.png` | Clés de la Réussite | https://clesdelareussitevae.com | Formation | Plateforme de formation VAE pour professionnels de santé en France | HTML · CSS · JS |
-| `mohamigroup.png` | MOH AMI Group | https://mohamigroup.com | Site vitrine | Équipement technologique pour institutions au Sénégal — infrastructure, fiabilité et performance sans compromis. | HTML · CSS · JS |
+| `billio.jpeg` | Billio | https://billio-sn.netlify.app | SaaS | Facturation et gestion commerciale pour entrepreneurs africains | Next.js · Supabase · PayTech |
+| `samadesk.jpeg` | SamaDesk | https://samadesk.netlify.app | E-commerce | Plateforme e-commerce de vente de bureaux et mobilier professionnel en ligne | Next.js · Supabase · Netlify |
+| `rekrut-cv.jpeg` | Rekrut CV | https://rekrut-cv.netlify.app | SaaS IA | Améliore ton CV en 2 minutes — score ATS sur 100, erreurs et recommandations pour le marché africain francophone | Next.js · Supabase · Wave · Orange Money |
+| `jokkoevents.jpeg` | JOKKO Events | https://jokkoevents.com | Plateforme | Gestion d'événements pour organisateurs — billetterie et suivi en temps réel | Next.js · Prisma · Supabase |
+| `lettouna.jpeg` | Lettouna | https://lettouna.com | Site web | Réservation de coiffeuses à domicile à Dakar avec paiement et notifications WhatsApp | Next.js · PayDunya · WhatsApp API |
+| `matvilla.jpeg` | Mat Villa | https://matvilla.com | Site vitrine | BTP et peinture LUMINA — présentation de services et réalisations | HTML · CSS · Netlify |
+| `mytima-love.jpeg` | Tima Love | https://mytimalove.com | App web | Site de rencontre sérieuse — mise en relation et profils pour trouver l'âme sœur | Next.js · Netlify |
+| `darling-body.jpeg` | Darling Body | https://darlingbody.com | E-commerce | Boutique en ligne de produits bien-être et minceur pour femmes | HTML · CSS · JS |
+| `cle-de-la-reussite.jpeg` | Clés de la Réussite | https://clesdelareussitevae.com | Formation | Plateforme de formation VAE pour professionnels de santé en France | HTML · CSS · JS |
+| `mohamigroup.jpeg` | MOH AMI Group | https://mohamigroup.com | Site vitrine | Équipement technologique pour institutions au Sénégal — infrastructure, fiabilité et performance sans compromis. | HTML · CSS · JS |
 
 5. Hover image : overlay sombre + bouton "Voir le projet ↗" centré
 6. Ratio image : 16/9 fixe, object-fit cover
 
 **Critères de validation :**
-- [ ] 11 projets affichés
+- [ ] 10 projets affichés
 - [ ] Hover + lien fonctionnel sur chaque carte
 - [ ] Noms de fichiers exactement respectés
 - [ ] Liens s'ouvrent dans un nouvel onglet
@@ -448,7 +446,7 @@ git push origin main
 | 2 | Hero | Photo + headline + CTA + chiffres clés |
 | 3 | À propos | Texte + photo décorée + 3 piliers |
 | 4 | Services | 3 cartes avec icônes, texte, pills |
-| 5 | Réalisations | Grille 11 projets avec liens externes |
+| 5 | Réalisations | Grille 10 projets avec liens externes |
 | 6 | Contact + Footer | Formulaire Netlify + infos + footer noir |
 | 7 | Finitions | Animations, SEO, favicon, performance |
 | 8 | Déploiement | Git push + Netlify + test production |
