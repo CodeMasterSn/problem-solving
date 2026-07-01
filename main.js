@@ -1,5 +1,5 @@
 /**
- * PSA Website — main.js
+ * Solvix Website — main.js
  *
  * Structure des fonctions à venir :
  * - initBurgerMenu()         — menu mobile (étape 1) ✓

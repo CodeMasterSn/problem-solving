@@ -1,5 +1,5 @@
-# PSA Website — Build Instructions
-**Projet** : Site one-page Problem Solving Agency (personal branding)  
+# Solvix Website — Build Instructions
+**Projet** : Site one-page Solvix (personal branding)  
 **Stack** : HTML + CSS + JS vanilla uniquement — zéro framework, zéro dépendance  
 **Hébergement cible** : Netlify  
 **Workflow** : Chaque étape = STOP → validation → étape suivante  
@@ -21,19 +21,19 @@
 ## STRUCTURE DES FICHIERS (respecter exactement)
 
 ```
-problem-solving-agency/
+solvix/
 │
 ├── index.html
 ├── style.css
 ├── main.js
-├── psa-website-build.md
+├── solvix-website-build.md
 │
 └── assets/
     ├── design/
     │   └── design-model/          ← wireframe de référence Claude Design
     │       ├── assets/
     │       ├── uploads/
-    │       └── Problem Solving Ag...html   ← ouvrir ce fichier comme référence visuelle
+    │       └── Solvix.html   ← ouvrir ce fichier comme référence visuelle
     │
     └── images/
         ├── rahime-hero.PNG        ← photo principale (casse exacte : .PNG majuscule)
@@ -82,7 +82,7 @@ Import dans le `<head>` :
 
 ## RÉFÉRENCE VISUELLE
 
-Ouvrir `assets/design/design-model/Problem Solving Ag....html` dans le navigateur avant de coder.  
+Ouvrir `assets/design/design-model/Solvix.html` dans le navigateur avant de coder.  
 Ce fichier est le wireframe exporté depuis Claude Design — c'est la référence principale pour la disposition, les proportions et l'ordre des sections. Ne pas inventer de layout, s'y conformer.
 
 ---
@@ -94,7 +94,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 2. Importer Google Fonts (Sora + DM Sans)
 3. Lier `style.css` et `main.js`
 4. Navbar fixe avec :
-   - Logo gauche : **"Problem Solving Agency"** uniquement (pas de sous-titre — le nom du fondateur apparaît ailleurs sur le site)
+   - Logo gauche : **"Solvix"** uniquement (pas de sous-titre — le nom du fondateur apparaît ailleurs sur le site)
    - Liens droite : À propos · Services · Réalisations · Contact
    - Bouton CTA "Travaillons ensemble" (fond `#4A90D9`, texte blanc)
    - Menu burger pour mobile (toggle JS dans main.js)
@@ -122,7 +122,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 3. Texte :
    ```
    Headline   : "Je construis les produits digitaux qui font avancer votre business."
-   Sous-titre : "Développeur & fondateur de PSA — je transforme vos idées en solutions
+   Sous-titre : "Développeur & fondateur de Solvix — je transforme vos idées en solutions
                  concrètes, de Dakar pour l'Afrique et au-delà."
    CTA 1      : "Voir mes réalisations" → #projects (bouton plein bleu)
    CTA 2      : "Me contacter" → #contact (bouton outline bleu)
@@ -174,7 +174,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 4. Titre : **"Bâtisseur de solutions digitales, formateur, entrepreneur."**
 5. Texte :
    ```
-   Développeur depuis plus de 5 ans, j'ai fondé Problem Solving Agency en 2025
+   Développeur depuis plus de 5 ans, j'ai fondé Solvix en 2025
    à Dakar avec une conviction simple : la technologie doit résoudre des problèmes
    réels. Depuis, j'ai livré des SaaS, des applications métier et formé plus de
    500 personnes aux outils du numérique — de Dakar pour l'Afrique et au-delà.
@@ -216,7 +216,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 
    **Carte 3 — Formation & Coaching Digital**
    - Icône SVG : livre ou diplôme
-   - Texte : "Formations pratiques pour entrepreneurs et équipes — HTML/CSS, outils IA, gestion de projet digital. 500+ apprenants depuis 2022."
+   - Texte : "J'accompagne entrepreneurs et équipes pour apprendre le développement web assisté par l'IA — de l'idée au déploiement, avec une méthode concrète et les bons outils. 500+ apprenants formés depuis 2022."
    - Pills : `Présentiel` · `En ligne` · `Sur mesure`
 
 5. Hover carte : élévation légère + bordure gauche `#4A90D9` (4px)
@@ -319,16 +319,16 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 
 **Infos contact :**
 - 📱 WhatsApp : `https://wa.me/221XXXXXXXXX` ← remplacer par le vrai numéro
-- 📧 Email : lien mailto avec l'adresse PSA
+- 📧 Email : lien mailto avec l'adresse de contact
 - 📍 Dakar, Sénégal
 
 ### 6C — Footer
 1. Fond `#0F0F0F`, texte `#FFFFFF`
 2. 3 colonnes desktop :
-   - Gauche : "Abdourahime SY" + "Problem Solving Agency"
+   - Gauche : "Abdourahime SY" + "Solvix"
    - Centre : liens rapides
    - Droite : icônes LinkedIn + WhatsApp
-3. Bas : `© 2025 Problem Solving Agency. Dakar, Sénégal.`
+3. Bas : `© 2025 Solvix. Dakar, Sénégal.`
 4. Mobile : 1 colonne
 
 **Critères de validation :**
@@ -360,10 +360,10 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 
 4. **Meta SEO** dans le `<head>` :
    ```html
-   <title>Abdourahime SY — Développeur & Fondateur PSA | Dakar, Sénégal</title>
-   <meta name="description" content="Problem Solving Agency — développement web, SaaS et automatisation pour entrepreneurs et PME en Afrique francophone. Basé à Dakar, Sénégal.">
+   <title>Solvix — Agence digitale · Dakar, Sénégal</title>
+   <meta name="description" content="Solvix — développement web, SaaS et automatisation pour entrepreneurs et PME en Afrique francophone. Basé à Dakar, Sénégal.">
    <meta name="author" content="Abdourahime SY">
-   <meta property="og:title" content="Abdourahime SY — Problem Solving Agency">
+   <meta property="og:title" content="Solvix — Développement web, SaaS & automatisation">
    <meta property="og:description" content="Je construis les produits digitaux qui font avancer votre business.">
    <meta property="og:image" content="assets/images/rahime-hero.PNG">
    <meta property="og:type" content="website">
@@ -398,7 +398,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 ### Git
 ```bash
 git add .
-git commit -m "✨ Init : site PSA one-page complet"
+git commit -m "✨ Init : site Solvix one-page complet"
 git push origin main
 ```
 
@@ -416,7 +416,7 @@ git push origin main
 
 ### Netlify
 1. netlify.com → "Add new site" → "Import an existing project" → GitHub
-2. Sélectionner le repo `problem-solving-agency`
+2. Sélectionner le repo `solvix`
 3. Build command : *(vide)*
 4. Publish directory : `.`
 5. Déployer
@@ -458,5 +458,5 @@ git push origin main
 
 ---
 
-*Build file — Problem Solving Agency*  
+*Build file — Solvix*  
 *Abdourahime SY — Dakar, Sénégal*
