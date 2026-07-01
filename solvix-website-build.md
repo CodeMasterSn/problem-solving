@@ -265,7 +265,7 @@ Ce fichier est le wireframe exporté depuis Claude Design — c'est la référen
 |---|---|---|---|---|---|
 | `billio.jpeg` | Billio | https://billio-sn.netlify.app | SaaS | Facturation et gestion commerciale pour entrepreneurs africains | Next.js · Supabase · PayTech |
 | `samadesk.jpeg` | SamaDesk | https://samadesk.netlify.app | E-commerce | Plateforme e-commerce de vente de bureaux et mobilier professionnel en ligne | Next.js · Supabase · Netlify |
-| `rekrut-cv.jpeg` | Rekrut CV | https://rekrut-cv.netlify.app | SaaS IA | Améliore ton CV en 2 minutes — score ATS sur 100, erreurs et recommandations pour le marché africain francophone | Next.js · Supabase · Wave · Orange Money |
+| `rekrut-cv.jpeg` | Rekrut CV | https://rekrut-sn.vercel.app | SaaS IA | Améliore ton CV en 2 minutes — score ATS sur 100, erreurs et recommandations pour le marché africain francophone | Next.js · Supabase · Wave · Orange Money |
 | `jokkoevents.jpeg` | JOKKO Events | https://jokkoevents.com | Plateforme | Gestion d'événements pour organisateurs — billetterie et suivi en temps réel | Next.js · Prisma · Supabase |
 | `lettouna.jpeg` | Lettouna | https://lettouna.com | Site web | Réservation de coiffeuses à domicile à Dakar avec paiement et notifications WhatsApp | Next.js · PayDunya · WhatsApp API |
 | `matvilla.jpeg` | Mat Villa | https://matvilla.com | Site vitrine | BTP et peinture LUMINA — présentation de services et réalisations | HTML · CSS · Netlify |
