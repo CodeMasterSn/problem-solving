@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Solvix</title>
+  <defs>
+    <linearGradient id="prism" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19C4CE"/>
+      <stop offset="1" stop-color="#4168F4"/>
+    </linearGradient>
+  </defs>
+  <path d="M22 7h20l15 15v20L42 57H22L7 42V22L22 7Zm3 10L17 25v14l8 8h14l8-8V25l-8-8H25Z" fill="url(#prism)" fill-rule="evenodd"/>
+  <path d="m25 24 7 4 7-4v16l-7 4-7-4V24Z" fill="#19C4CE"/>
+  <path d="m32 28 7-4v16l-7 4V28Z" fill="#D85872"/>
+</svg>

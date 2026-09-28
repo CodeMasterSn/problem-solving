@@ -8,6 +8,7 @@
  */
 
 function initScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -17,6 +18,24 @@ function initScrollReveal() {
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+}
+
+function initStudioMotion() {
+  const targets = document.querySelectorAll('.studio-reveal');
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.documentElement.classList.add('studio-motion-ready');
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+
+  targets.forEach((target) => observer.observe(target));
 }
 
 function initBurgerMenu() {
@@ -59,4 +78,5 @@ function initBurgerMenu() {
 document.addEventListener('DOMContentLoaded', () => {
   initBurgerMenu();
   initScrollReveal();
+  initStudioMotion();
 });
