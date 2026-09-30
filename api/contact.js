@@ -30,7 +30,7 @@ const BUDGETS = [
 ];
 
 const MAX_BODY_BYTES = 16 * 1024;
-const LIMITS = { name: 120, email: 254, company: 160, need: 4000 };
+const LIMITS = { name: 120, email: 254, phone: 30, company: 160, need: 4000 };
 const MIN_NEED = 20;
 const RATE_LIMIT_MAX = 4;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -39,6 +39,8 @@ const MIN_FILL_MS = 2500;
 const RATE_LIMIT_MAP = new Map();
 
 const EMAIL_RE = /^[^\s@"'<>()[\]\\,;:]+@[^\s@"'<>()[\]\\,;:]+\.[a-z]{2,}$/i;
+const PHONE_RE = /^[+()\d\s./-]+$/;
+const PHONE_MIN_DIGITS = 6;
 
 const GENERIC_ERROR = {
   success: false,
@@ -120,6 +122,7 @@ function buildEmailHtml(data) {
   const rows = [
     ['Nom', data.name],
     ['Email', data.email],
+    ['Téléphone', data.phone || 'Non renseigné'],
     ['Entreprise', data.company || 'Non renseignée'],
     ['Type de projet', data.project_type],
     ['Budget estimatif', data.budget || 'Non renseigné'],
@@ -155,6 +158,7 @@ function buildEmailText(data) {
     '',
     `Nom : ${data.name}`,
     `Email : ${data.email}`,
+    `Téléphone : ${data.phone || 'Non renseigné'}`,
     `Entreprise : ${data.company || 'Non renseignée'}`,
     `Type de projet : ${data.project_type}`,
     `Budget estimatif : ${data.budget || 'Non renseigné'}`,
@@ -214,16 +218,24 @@ export default async function handler(req, res) {
     name: clean(payload.name),
     email: clean(payload.email),
     company: clean(payload.company),
+    phone: clean(payload.phone),
     project_type: clean(payload.project_type),
     need: clean(payload.need),
     budget: clean(payload.budget),
   };
+
+  const phoneIsValid =
+    data.phone === '' ||
+    (data.phone.length <= LIMITS.phone &&
+      PHONE_RE.test(data.phone) &&
+      (data.phone.match(/\d/g) || []).length >= PHONE_MIN_DIGITS);
 
   const invalid =
     data.name.length < 2 ||
     data.name.length > LIMITS.name ||
     !EMAIL_RE.test(data.email) ||
     data.email.length > LIMITS.email ||
+    !phoneIsValid ||
     data.company.length > LIMITS.company ||
     data.need.length < MIN_NEED ||
     data.need.length > LIMITS.need ||

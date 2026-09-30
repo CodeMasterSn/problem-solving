@@ -189,6 +189,7 @@ function initContactForm() {
       name: form.elements.name.value.trim(),
       email: form.elements.email.value.trim(),
       company: form.elements.company.value.trim(),
+      phone: form.elements.phone.value.trim(),
       project_type: form.elements.project_type.value,
       need: form.elements.need.value.trim(),
       budget: form.elements.budget.value,
