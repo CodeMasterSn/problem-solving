@@ -75,8 +75,27 @@ function initBurgerMenu() {
   });
 }
 
+function initSolReveal() {
+  const targets = document.querySelectorAll('.sol-reveal');
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.documentElement.classList.add('solx-motion-ready');
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+
+  targets.forEach((target) => observer.observe(target));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initBurgerMenu();
   initScrollReveal();
   initStudioMotion();
+  initSolReveal();
 });
