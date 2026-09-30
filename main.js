@@ -93,9 +93,45 @@ function initSolReveal() {
   targets.forEach((target) => observer.observe(target));
 }
 
+function initSolFilter() {
+  const chips = document.querySelectorAll('.sol-filterchip');
+  const cards = document.querySelectorAll('#portfolio [data-type]');
+  const title = document.getElementById('portfolio-title');
+  if (!chips.length) return;
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const scrollY = window.scrollY;
+      const filter = chip.dataset.filter || 'all';
+      chips.forEach((c) => {
+        const active = c === chip;
+        c.classList.toggle('sol-filterchip--on', active);
+        c.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const match = filter === 'all' || card.dataset.type === filter;
+        card.classList.toggle('sol-is-hidden', !match);
+        if (match) visibleCount += 1;
+      });
+      if (title) {
+        if (filter === 'all') {
+          title.textContent = '5 autres réalisations sur-mesure.';
+        } else {
+          const label = chip.dataset.label || '';
+          const noun = visibleCount > 1 ? 'réalisations sur-mesure' : 'réalisation sur-mesure';
+          title.textContent = visibleCount + ' ' + noun + (label ? ' \u00b7 ' + label : '') + '.';
+        }
+      }
+      window.scrollTo(0, scrollY);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initBurgerMenu();
   initScrollReveal();
   initStudioMotion();
   initSolReveal();
+  initSolFilter();
 });

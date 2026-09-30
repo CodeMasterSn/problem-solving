@@ -1005,7 +1005,9 @@ section[id] {
 .sol-cta__actions {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 16px;
 }
 
 .sol-cta__meta {
