@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Solvix</title>
+  <meta name="description" content="Parlons de votre projet. Expliquez votre besoin, votre idée ou le problème à résoudre. Solvix répond avec un premier échange de cadrage sans engagement.">
+  <meta name="author" content="Abdourahime SY">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <meta property="og:title" content="Contact — Solvix">
+  <meta property="og:description" content="Parlons de votre projet : expliquez-nous votre besoin, nous commencerons par en discuter.">
+  <meta property="og:image" content="../assets/images/projets/xam-xam.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Solvix">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../home.css?v=3">
+  <link rel="stylesheet" href="../pages.css?v=17">
+</head>
+<body class="solx">
+  <a class="sol-skip" href="#contenu">Aller au contenu</a>
+
+  <header class="sol-header" id="navbar">
+    <div class="sol-container sol-header__inner">
+      <a class="sol-brand" href="/" aria-label="Solvix, retour à l'accueil">
+        <img class="sol-brand__logo" src="../assets/logo.png" alt="Logotype Solvix">
+        <span class="sol-brand__word">SOLVIX</span>
+      </a>
+      <nav class="sol-nav" id="nav-menu" aria-label="Navigation principale">
+        <ul class="sol-nav__links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/solutions/">Solutions</a></li>
+          <li><a href="/projets/">Projets</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/contact/" class="is-active" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="sol-btn sol-btn--primary sol-nav__cta" href="#formulaire">Parlons de votre projet <span class="sol-ico material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      </nav>
+      <a class="sol-btn sol-btn--primary sol-header__cta" href="#formulaire">Parlons de votre projet <span class="sol-ico material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      <button type="button" class="sol-burger" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ==================================================
+         SECTION 01 : HERO
+         ================================================== -->
+    <section class="sol-hero sol-hero--page" aria-labelledby="hero-title">
+      <div class="sol-container">
+        <div class="sol-hero__split">
+          <div class="sol-hero__main">
+            <p class="sol-hero__badge sol-reveal">
+              <span class="sol-label"><span class="sol-badge__dot" aria-hidden="true"></span> Solvix — Premier échange</span>
+            </p>
+            <h1 id="hero-title" class="sol-reveal">Parlons de votre projet.</h1>
+            <p class="sol-hero__lead sol-reveal">Vous avez un besoin, une idée ou un problème à résoudre&nbsp;? Expliquez-nous ce que vous avez en tête.</p>
+          </div>
+          <div class="sol-hero__side sol-reveal">
+            <p>Décrivez votre contexte en quelques lignes. Nous vous répondons avec un premier échange de cadrage, sans engagement.</p>
+            <div class="sol-hero__ctas">
+              <a class="sol-btn sol-btn--primary" href="#formulaire">Remplir le formulaire <span class="sol-ico material-symbols-outlined" aria-hidden="true">arrow_downward</span></a>
+              <a class="sol-btn sol-btn--ghost" href="mailto:syabdourahim9@gmail.com">syabdourahim9@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 02 : FORMULAIRE + INFOS
+         ================================================== -->
+    <section class="sol-section" id="formulaire" aria-labelledby="form-title">
+      <div class="sol-container">
+        <div class="sol-formgrid">
+          <div class="sol-formcard sol-reveal">
+            <div class="sol-formcard__head">
+              <div>
+                <h2 id="form-title">Démarrer un échange de cadrage</h2>
+                <p>Structurons ensemble votre prochaine étape technique.</p>
+              </div>
+              <span class="sol-form__slot"><span class="material-symbols-outlined" aria-hidden="true">schedule</span> Réponse sous 24h ouvrées</span>
+            </div>
+
+            <form class="sol-form" name="contact" method="POST" novalidate>
+              <p hidden aria-hidden="true"><label>Ne pas remplir ce champ<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+              <input type="hidden" name="rendered_at" id="rendered-at" value="">
+              <noscript><p class="sol-form__error">Le formulaire nécessite JavaScript. Vous pouvez nous écrire directement à <a href="mailto:syabdourahim9@gmail.com">syabdourahim9@gmail.com</a>.</p></noscript>
+
+              <div class="sol-form__row">
+                <div class="sol-form__field">
+                  <label class="sol-form__label" for="name">Nom complet <em>*</em></label>
+                  <input class="sol-field" id="name" name="name" type="text" placeholder="Votre nom" required autocomplete="name">
+                </div>
+                <div class="sol-form__field">
+                  <label class="sol-form__label" for="email">Adresse email <em>*</em></label>
+                  <input class="sol-field" id="email" name="email" type="email" placeholder="votre@email.com" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="sol-form__row">
+                <div class="sol-form__field">
+                  <label class="sol-form__label" for="company">Entreprise / Organisation <span class="sol-form__hint">(facultatif)</span></label>
+                  <input class="sol-field" id="company" name="company" type="text" placeholder="Nom de votre entreprise" autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="sol-form__field">
+                <span class="sol-form__label" id="project-type-label">Type de projet</span>
+                <div class="sol-pills" role="radiogroup" aria-labelledby="project-type-label">
+                  <input class="sol-pill__input" type="radio" id="type-site" name="project_type" value="Site web">
+                  <label class="sol-pill__label" for="type-site">Site web</label>
+                  <input class="sol-pill__input" type="radio" id="type-app" name="project_type" value="Application">
+                  <label class="sol-pill__label" for="type-app">Application</label>
+                  <input class="sol-pill__input" type="radio" id="type-outil" name="project_type" value="Outil métier">
+                  <label class="sol-pill__label" for="type-outil">Outil métier</label>
+                  <input class="sol-pill__input" type="radio" id="type-plateforme" name="project_type" value="Plateforme">
+                  <label class="sol-pill__label" for="type-plateforme">Plateforme</label>
+                  <input class="sol-pill__input" type="radio" id="type-auto" name="project_type" value="Automatisation">
+                  <label class="sol-pill__label" for="type-auto">Automatisation</label>
+                  <input class="sol-pill__input" type="radio" id="type-autre" name="project_type" value="Autre">
+                  <label class="sol-pill__label" for="type-autre">Autre</label>
+                </div>
+              </div>
+
+              <div class="sol-form__field">
+                <label class="sol-form__label" for="need">Votre besoin / Le problème à résoudre <em>*</em></label>
+                <textarea class="sol-field--area" id="need" name="need" rows="4" placeholder="Expliquez-nous votre besoin, le problème que vous souhaitez résoudre ou l'idée que vous avez en tête..." required></textarea>
+              </div>
+
+              <div class="sol-form__field">
+                <span class="sol-form__label" id="budget-label">Budget estimatif <span class="sol-form__hint">(facultatif)</span></span>
+                <div class="sol-pills" role="radiogroup" aria-labelledby="budget-label">
+                  <input class="sol-pill__input" type="radio" id="budget-a" name="budget" value="Moins de 500 000 FCFA">
+                  <label class="sol-pill__label" for="budget-a">Moins de 500 000 FCFA</label>
+                  <input class="sol-pill__input" type="radio" id="budget-b" name="budget" value="500 000 – 1 000 000 FCFA">
+                  <label class="sol-pill__label" for="budget-b">500 000 – 1 000 000 FCFA</label>
+                  <input class="sol-pill__input" type="radio" id="budget-c" name="budget" value="1 000 000 – 3 000 000 FCFA">
+                  <label class="sol-pill__label" for="budget-c">1 000 000 – 3 000 000 FCFA</label>
+                  <input class="sol-pill__input" type="radio" id="budget-d" name="budget" value="Plus de 3 000 000 FCFA">
+                  <label class="sol-pill__label" for="budget-d">Plus de 3 000 000 FCFA</label>
+                  <input class="sol-pill__input" type="radio" id="budget-e" name="budget" value="Je ne sais pas encore">
+                  <label class="sol-pill__label" for="budget-e">Je ne sais pas encore</label>
+                </div>
+              </div>
+
+              <div class="sol-form__actions">
+                <button class="sol-btn sol-btn--primary" type="submit" id="contact-submit">Envoyer ma demande <span class="sol-ico material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+                <p class="sol-form__note">Les champs marqués d'un <em>*</em> sont obligatoires. Votre message est transmis à l'adresse <strong>syabdourahim9@gmail.com</strong>.</p>
+                <p class="sol-form__error" id="contact-error" aria-live="assertive" hidden></p>
+              </div>
+            </form>
+          </div>
+
+          <div class="sol-side">
+            <div class="sol-infocard sol-reveal">
+              <div class="sol-infocard__head">
+                <h3>Solvix</h3>
+                <span class="sol-infocard__marker"><span class="material-symbols-outlined" aria-hidden="true">location_on</span> Dakar, Sénégal</span>
+              </div>
+              <div class="sol-infocard__block">
+                <span class="sol-infocard__label">Canal direct</span>
+                <a class="sol-infocard__email" href="mailto:syabdourahim9@gmail.com"><span class="material-symbols-outlined" aria-hidden="true">mail</span> syabdourahim9@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="sol-reassure sol-reveal">
+              <div class="sol-reassure__icon" aria-hidden="true"><span class="material-symbols-outlined">chat_bubble_outline</span></div>
+              <blockquote>« Pas besoin d'avoir un cahier des charges complet. Expliquez-nous simplement votre besoin, nous commencerons par en discuter. »</blockquote>
+              <p>Un premier échange sans engagement pour clarifier vos besoins réels et la faisabilité technique.</p>
+            </div>
+
+            <div class="sol-recap sol-reveal">
+              <span class="sol-recap__lead">Cadrage rapide &amp; pragmatique</span>
+              <span class="sol-recap__right">0 engagement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 03 : CONCLUSION
+         ================================================== -->
+    <section class="sol-section sol-section--alt" aria-labelledby="conclusion-title">
+      <div class="sol-container">
+        <div class="sol-conclusion sol-reveal">
+          <div class="sol-conclusion__mark" aria-hidden="true"></div>
+          <div>
+            <span class="sol-conclusion__label" id="conclusion-title">Problème → Réflexion → Solution</span>
+            <h3>Un problème à résoudre&nbsp;? Construisons la solution.</h3>
+          </div>
+          <div class="sol-conclusion__bloc">
+            <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
+            <div>
+              <strong>Prise en charge locale</strong>
+              <span>Interventions Afrique de l'Ouest &amp; International</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sol-footer">
+    <div class="sol-container">
+      <div class="sol-footer__main">
+        <div class="sol-footer__brand">
+          <a class="sol-brand" href="/" aria-label="Solvix, retour à l'accueil">
+            <img class="sol-brand__logo" src="../assets/logo.png" alt="Logotype Solvix">
+            <span class="sol-brand__word">SOLVIX</span>
+          </a>
+          <span class="sol-footer__location">Dakar, Sénégal</span>
+        </div>
+        <nav aria-label="Liens du pied de page">
+          <a href="/solutions/">Solutions</a>
+          <a href="/projets/">Projets</a>
+          <a href="/process/">Process</a>
+          <a href="/a-propos/">À propos</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+        <span class="sol-footer__copy">© 2026 Solvix. Tous droits réservés.</span>
+      </div>
+      <div class="sol-footer__legal">
+        <a href="../mentions-legales.html">Mentions légales</a>
+        <a href="../politique-confidentialite.html">Confidentialité</a>
+        <a href="../conditions-generales.html">Conditions générales</a>
+        <a href="../politique-cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js?v=6"></script>
+</body>
+</html>

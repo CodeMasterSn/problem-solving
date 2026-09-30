@@ -128,10 +128,103 @@ function initSolFilter() {
   });
 }
 
+function initContactForm() {
+  const form = document.querySelector('.sol-form');
+  if (!form) return;
+
+  const submitBtn = form.querySelector('#contact-submit');
+  const errorBox = form.querySelector('#contact-error');
+  const renderedAt = form.querySelector('#rendered-at');
+  const required = ['name', 'email', 'project_type', 'need'];
+  const submitLabel = 'Envoyer ma demande';
+  const loadingLabel = 'Envoi en cours…';
+  let sending = false;
+
+  if (renderedAt) renderedAt.value = String(Date.now());
+
+  function showError(message) {
+    if (!errorBox) return;
+    errorBox.textContent = message;
+    errorBox.hidden = false;
+  }
+
+  function clearError() {
+    if (!errorBox) return;
+    errorBox.textContent = '';
+    errorBox.hidden = true;
+  }
+
+  function setSending(state) {
+    sending = state;
+    if (!submitBtn) return;
+    submitBtn.disabled = state;
+    submitBtn.setAttribute('aria-busy', state ? 'true' : 'false');
+    submitBtn.firstChild.textContent = state ? ` ${loadingLabel} ` : ` ${submitLabel} `;
+  }
+
+  function firstMissingField() {
+    for (const fieldName of required) {
+      const el = form.elements[fieldName];
+      if (!el) continue;
+      const value = form.elements[fieldName].value || '';
+      if (!String(value).trim()) return el;
+    }
+    return null;
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (sending) return;
+
+    clearError();
+
+    const missing = firstMissingField();
+    if (missing) {
+      showError('Veuillez compléter les champs obligatoires avant d’envoyer votre demande.');
+      missing.focus();
+      return;
+    }
+
+    const data = {
+      name: form.elements.name.value.trim(),
+      email: form.elements.email.value.trim(),
+      company: form.elements.company.value.trim(),
+      project_type: form.elements.project_type.value,
+      need: form.elements.need.value.trim(),
+      budget: form.elements.budget.value,
+      'bot-field': form.elements['bot-field'].value,
+      rendered_at: form.elements.rendered_at.value,
+    };
+
+    setSending(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        throw new Error('send_failed');
+      }
+
+      window.location.assign('/merci.html');
+    } catch (error) {
+      setSending(false);
+      showError(
+        'Une erreur est survenue lors de l’envoi. Vérifiez vos informations et réessayez.'
+      );
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initBurgerMenu();
   initScrollReveal();
   initStudioMotion();
   initSolReveal();
   initSolFilter();
+  initContactForm();
 });

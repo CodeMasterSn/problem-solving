@@ -1,0 +1,13 @@
+{
+  "name": "solvix-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site Solvix — formulaire de contact (Vercel Function + Resend)",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^4.0.1"
+  }
+}
