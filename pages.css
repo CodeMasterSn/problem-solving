@@ -1494,6 +1494,31 @@
   padding-top: 20px;
 }
 
+.sol-infocard__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sol-infocard__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sol-infocard__link .sol-ico {
+  font-size: 15px;
+}
+
+.sol-infocard__link:hover {
+  color: var(--coral);
+}
+
 .sol-infocard__label {
   display: block;
   margin-bottom: 8px;
