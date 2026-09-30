@@ -1070,6 +1070,26 @@ section[id] {
   font-size: 0.875rem;
 }
 
+.sol-footer__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sol-footer__phone .material-symbols-outlined {
+  color: var(--coral);
+  font-size: 16px;
+}
+
+.sol-footer__phone:hover {
+  color: var(--coral);
+}
+
 .sol-footer nav {
   display: flex;
   flex-wrap: wrap;
