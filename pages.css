@@ -111,7 +111,7 @@
 .sol-orbit__ring {
   position: absolute;
   inset: 24px;
-  border: 1px solid rgba(51, 51, 51, 0.1);
+  border: 2px solid rgba(51, 51, 51, 0.25);
   border-radius: 50%;
 }
 
@@ -133,9 +133,14 @@
   object-fit: contain;
 }
 
+.sol-orbit__track {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
 .sol-orbit__tag {
   position: absolute;
-  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -144,20 +149,47 @@
   background: var(--white);
   box-shadow: 0 4px 12px rgba(51, 51, 51, 0.08);
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--coral);
 }
 
-.sol-orbit__tag--top {
-  top: 12%;
+.sol-orbit__tag--a {
+  top: 6%;
+  left: 50%;
+  margin-left: -72px;
+}
+
+.sol-orbit__tag--b {
+  bottom: 24%;
   left: 4%;
 }
 
-.sol-orbit__tag--bottom {
+.sol-orbit__tag--c {
   right: 2%;
-  bottom: 14%;
-  color: var(--coral);
+  bottom: 24%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sol-orbit__track {
+    animation: sol-orbit-rotate 16s linear infinite;
+  }
+
+  .sol-orbit__tag {
+    animation: sol-orbit-rotate-rev 16s linear infinite;
+  }
+}
+
+@keyframes sol-orbit-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sol-orbit-rotate-rev {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
 }
 
 /* --------------------------------------------
@@ -946,11 +978,17 @@
   border-radius: var(--r-card);
   background: var(--white);
   box-shadow: 0 1px 8px rgba(51, 51, 51, 0.06);
-  transition: box-shadow 0.2s ease;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .sol-vcard:hover {
-  box-shadow: 0 8px 24px rgba(51, 51, 51, 0.08);
+  transform: translateY(-4px);
+  border-color: var(--coral);
+  box-shadow: 0 12px 28px rgba(255, 107, 74, 0.22);
+}
+
+.sol-vcard:hover .sol-vcard__top .material-symbols-outlined {
+  color: var(--coral);
 }
 
 .sol-vcard--accent {
@@ -1098,11 +1136,30 @@
   margin-bottom: 16px;
 }
 
+.sol-founder__role--lead {
+  color: var(--coral);
+  font-size: 1.375rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
 .sol-founder__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   color: var(--ink-muted);
+  margin-bottom: 24px;
+}
+
+.sol-founder__bio p {
   font-size: 1rem;
   line-height: 1.65;
-  margin-bottom: 20px;
+  margin: 0;
+}
+
+.sol-mark {
+  color: var(--coral);
+  font-weight: 800;
 }
 
 .sol-chips {
